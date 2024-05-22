@@ -2,10 +2,10 @@ import express from "express";
 import path from "path";
 import {
   agregarGastosCtrl,
-  buscarGastos,
-  editarGasto,
-  borrarGastos
- } from "../controllers/gastosCtrl.js";
+  buscarGastosCtrl,
+  borrarGastosCtrl,
+} from "../controllers/gastosCtrl.js";
+ 
 import {
     agregarRoommateCtrl,
     buscarRoommatesCtrl,
@@ -35,14 +35,14 @@ router.post("/gastos", agregarGastosCtrl);
 
 
 // - gastos GET: Devuelve el historial con todos los gastos registrados.
-router.get("/gastos", buscarGastos);
+router.get("/gastos", buscarGastosCtrl);
 
 // - /gasto PUT: Edita los datos de un gasto.
-router.put("/gasto", editarGasto);
+//router.put("/gasto", editarGastoCtrl);
 
 
 // - /gasto DELETE: Elimina un gasto del historial.
-router.delete("/gasto", borrarGastos);
+router.delete("/gasto", borrarGastosCtrl);
 
 // - /ruta generica
 router.get("*", (req, res) => {

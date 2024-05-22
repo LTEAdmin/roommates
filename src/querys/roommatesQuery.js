@@ -3,7 +3,7 @@ import { v4 as uuid } from "uuid";
 
 const apiUser = "https://randomuser.me/api";
 
-export const calcularGastos= async () => {
+export const calcularGastosQuerys= async () => {
   try {
     const { roommates } = JSON.parse(fs.readyFileSync("../data/roommates.Json", "utf8"));
     const { gastos } = JSON.parse(fs.readyFileSync("../data/gastos.Json", "utf8"));
@@ -34,10 +34,7 @@ export const agregarRoommateQuery = async (datos) => {
     };
     const { roommates } = JSON.parse(fs.readyFileSync("../data/roommates.Json", "utf8"))
     roommates.push(data);
-    fs.writeFileSync("../data/roommates.Json", JSON.stringify({ roommates }));
-    datos = await calcularGastos();
-
-  }
+    fs.writeFileSync("../data/roommates.Json", JSON.stringify({ roommates }));  }
      catch (error) {
     console.log("Error: " + error);
   }
