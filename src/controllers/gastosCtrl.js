@@ -1,4 +1,4 @@
-import {
+ /*import {
     agregarGastosQuery,
     buscarGastosQuery, 
     borrarGastosQuery,
@@ -16,8 +16,8 @@ export const agregarGastosCtrl = async (req, res) => {
     catch (error) { 
         res.status(500).send("Error: " + error);
     };
-};
-
+};*/
+/*
 export const buscarGastosCtrl = async (req, res) => {
     try {
         const result = await buscarGastosQuery();
@@ -37,4 +37,4 @@ export const borrarGastosCtrl = async (req, res) => {
     catch (error) { 
         res.status(500).send("Error: " + error);
     };
-}
+} */

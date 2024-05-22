@@ -1,6 +1,6 @@
-import fs from "fs";
-import { v4 as uuidv4 } from 'uuid';
-
+/* import fs from "fs";
+import { v4 as uuidv4 } from 'uuid'; */
+/* 
 export const agregarGastosQuery = async (req, res) => {
     try {
         const { name, descripcion, monto } = req.body;
@@ -18,7 +18,7 @@ export const agregarGastosQuery = async (req, res) => {
 export const buscarGastosQuery = async () => {
     try {
         const gastos = JSON.parse(fs.readFileSync("../data/gastos.Json", "utf8"));
-        return (gastos);
+        return gastos;
     }
     catch (error) {
         res.status(500).send("Error: " + error);
@@ -35,4 +35,4 @@ export const borrarGastosQuery = async (id) => {
     catch (error) {
         res.status(500).send("Error: " + error);
     };
-}
+} */

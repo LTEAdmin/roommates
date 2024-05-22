@@ -15,4 +15,7 @@ app.use(express.static(path.join(__dirname, "/src")));
 //routes
 app.use("/", router);
 
-app.listen( port, console.log(`Example app listening on port http://localhost:${port}`));
+app.listen(
+  port,
+  console.log(`Example app listening on port http://localhost:${port}`)
+);
