@@ -3,7 +3,7 @@ import { v4 as uuid } from "uuid";
 
 const apiUser = "https://randomuser.me/api";
 
-const calcularGastos= async () => {
+export const calcularGastos= async () => {
   try {
     const { roommates } = JSON.parse(fs.readyFileSync("../data/roommates.Json", "utf8"));
     const { gastos } = JSON.parse(fs.readyFileSync("../data/gastos.Json", "utf8"));

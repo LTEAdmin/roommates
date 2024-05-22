@@ -1,6 +1,11 @@
 import express from "express";
 import path from "path";
-import { } from "../controllers/gastosCtrl.js";
+import {
+  agregarGastosCtrl,
+  buscarGastos,
+  editarGasto,
+  borrarGastos
+ } from "../controllers/gastosCtrl.js";
 import {
     agregarRoommateCtrl,
     buscarRoommatesCtrl,
@@ -26,7 +31,7 @@ router.get("/roommates", buscarRoommatesCtrl);
 router.post("/roommate", agregarRoommateCtrl);
 
 // - /gastos POST
-router.post("/gastos", agregarGastos);    
+router.post("/gastos", agregarGastosCtrl);    
 
 
 // - gastos GET: Devuelve el historial con todos los gastos registrados.
