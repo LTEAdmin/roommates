@@ -25,9 +25,10 @@ app.use(express.urlencoded({ extended: false })); */
 app.use(express.json());
 
 //static files
-app.use("/src", express.static(path.join(__dirname, "src")));
-//app.use(express.static( '/src'));
-//app.use(express.static('src' )));
+//app.use("/src", express.static(path.join(__dirname, "src")));
+//app.use(express.static('/src'));
+//app.use("/src", express.static(path.join(__dirname, "/src")));
+app.use(express.static('src' ));
 
 //routes
 app.use("/", router);
